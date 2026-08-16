@@ -14,12 +14,12 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          cd /home/ubuntu/github-action-ci-cd
+          cd github-ci-ci-project
           npm i
 
       - name: Run Tests
         run: |
-          cd /home/ubuntu/github-action-ci-cd
+          cd /github-ci-ci-project
           npm run test
 
   cd:
