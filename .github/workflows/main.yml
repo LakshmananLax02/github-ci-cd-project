@@ -28,9 +28,6 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
-
-      - name: Build Application
-        run: npm run build
-
+        
       - name: Restart App
         run: pm2 restart index
