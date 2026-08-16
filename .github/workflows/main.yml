@@ -18,10 +18,10 @@ jobs:
       - name: Run Tests
         run: npm run test
 
-  cd:
-    needs: ci
-    runs-on: self-hosted
+  # cd:
+  #   needs: ci
+  #   runs-on: self-hosted
 
-    steps:
-      - name: Restart App
-        run: pm2 restart backend-prod
+  #   steps:
+  #     - name: Restart App
+  #       run: pm2 restart backend-prod
