@@ -23,11 +23,9 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: Checkout Latest Code
-        uses: actions/checkout@v4
-
-      - name: Install Dependencies
-        run: npm install
-        
-      - name: Restart App
-        run: pm2 restart index
+      - name: Deploy Latest Code
+        run: |
+          cd /home/ubuntu/github-ci-cd-project
+          git pull origin main
+          npm install
+          pm2 restart index --update-env
