@@ -9,10 +9,8 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: Pull Latest Code
-        run: |
-          cd /home/ubuntu/github-action-ci-cd
-          git pull origin master
+      - name: Checkout Latest Code
+        run: actions/checkout@v4
 
       - name: Install Dependencies
         run: |
